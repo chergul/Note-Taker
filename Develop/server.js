@@ -7,6 +7,10 @@ const path = require('path');
 
 const database = require("./db/db.json");
 
+//unique id
+const { v4: uuidv4 } = require('uuid');
+
+
 
 // Sets up the Express Server
 
@@ -41,8 +45,8 @@ server.post('/api/notes', function(req, res) {
       myNotes.push(newNote);
 
       myNotes.forEach((note, index)=>{
-        note.id= 1
-        note.id++;
+        note.id= uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+        
         return myNotes;
       })
       res.json(newNote);
@@ -71,8 +75,36 @@ server.get('/api/notes', function(req, res) {
   });
 
 //Delete notes
+//id is important
 
+server.delete("/api/notes/:id", function(req, res) {
+    const id = req.params.id;
 
+    fs.readFile(`${__dirname}/db/db.json`, 'utf8', function(err, data){
+      if(err){
+        throw err;
+      } else {
+        console.log(data);
+        const db = [];
+        JSON.parse(data).forEach((item, i) => {
+          db.push(item);
+        });
+        db.forEach((item, i) => {
+          if(item.id === id) {
+            db.splice(i, 1);
+          }
+        });
+        fs.writeFile(`${__dirname}/db/db.json`, JSON.stringify(db), function(err){
+          if(err) {
+            throw err;
+          } else {
+            console.log("Note added to data base");
+          }
+        });
+        res.redirect("/api/notes");
+      }
+    });
+  });
 
 
 
