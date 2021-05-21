@@ -1,15 +1,26 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app that can write, save, and delete notes.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Ceyda Hergul",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "fs": "0.0.1-security"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://chergul.github.io/Note-Taker/"
+  },
+  "keywords": [
+    "note-taker",
+    "express",
+    "node"
+  ]
 }
