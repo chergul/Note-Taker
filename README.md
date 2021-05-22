@@ -15,11 +15,11 @@ EXPRESS Note Taker is intended to be used for anyone who needs a place to organi
 ## Screenshot for the application
 ​
 1-Home Page
-![Screenshot](./assets/Screenshot1.png)
+![Screenshot](./Assets/Screenshot1.png)
 2-Note Page
-![Screenshot](./assets/Screenshot2.png)
+![Screenshot](./Assets/Screenshot2.png)
 3-Notes
-![Screenshot](./assets/Screenshot3.png)
+![Screenshot](./Assets/Screenshot3.png)
 ​
 ## Video for the app
 ​
