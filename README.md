@@ -23,7 +23,7 @@ EXPRESS Note Taker is intended to be used for anyone who needs a place to organi
 ​
 ## Video for the app
 ​
-![Demo](./assets/demo.gif)
+![Demo](./Assets/demo.gif)
 
 ## Questions
 If you have any questions about this repo, you can open an issue, or contact directly at 
